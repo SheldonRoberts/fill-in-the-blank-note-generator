@@ -1,4 +1,3 @@
-import nltk
 from rake_nltk import Rake
 from docx import Document
 from itertools import zip_longest
