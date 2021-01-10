@@ -6,10 +6,12 @@ A web app that creates auto-generated fill in the blank notes.
 <h2>Objectives</h2>
 <p>Teachers often provide students with fill in the blank notes, or <a href="https://www.theteachertoolkit.com/index.php/tool/guided-notes#:~:text=Guided%20Notes%20are%20teacher%2Dprepared,%2C%20facts%2C%20definitions%2C%20etc.">guided notes </a>, to improve the student interaction in the material. These notes can be made by hand, or with tools such as <a href="https://www.interventioncentral.org/rti2/guided_notes">Guided-Notes Maker</a>. I had two major issues with existing sites that this project aimed to fix:</p>
 <ul>
-  <li>The words to be blanked out must be selected by hand.</li>
-  <li>The notes must be pasted in as plain text, which loses all formatting of the document.</li>
+  <li>The words to be blanked out must be selected by hand</li>
+  <li>The notes must be pasted in as plain text (can't use a file)</li>
+  <li>All formatting of the document is lost</li>
 </ul>
 
+<p>This project solves all of those issues. Using rake-nltk keywords are automatically found and blanked out. Text can be input through a Textfield, or uploaded as a .docx file, which maintains the formatting of the document.</p>
 
 
 <h4>Plain Text Notes</h4>
