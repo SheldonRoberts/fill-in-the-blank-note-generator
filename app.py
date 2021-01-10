@@ -5,9 +5,6 @@ from forms import AddNotes, AddDoc
 from notegenerator import generate_notes, generate_docx
 from werkzeug.utils import secure_filename
 
-## TEMP
-from docx import Document
-
 # Initialize the Flask App
 app = Flask(__name__)
 # SECRET_KEY must be set to use session
