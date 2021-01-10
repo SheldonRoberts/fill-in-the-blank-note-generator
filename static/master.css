@@ -1,0 +1,49 @@
+.title {
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.titleback {
+  padding: 20px;
+  background-color: #118aed;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  background-color: #1A1A1D;
+  color: white;
+  text-align: center;
+}
+
+ul {
+  display:table;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.maintext {
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+
+.textfield {
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  margin: auto;
+}
+
+.outline {
+  outline: 2px solid #118aed;
+  width: 70%;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding: 5px;
+}

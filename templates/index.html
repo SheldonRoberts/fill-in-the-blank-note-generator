@@ -1,0 +1,44 @@
+{% extends "base.html"%}
+{% block content %}
+
+<h4>Convert any text into fill in the blank notes</h4>
+<p>Two ways to use:</p>
+<ul>
+  <li>Paste text into the textarea below and press generate. A new text output will be generated</li>
+  <li>Upload a file (.docx) and press generate file. A new document with blanks will be generated</li>
+</ul>
+<br>
+
+<div class="outline">
+  <h4>Upload a .docx file</h4>
+  <form method="post" enctype="multipart/form-data">
+    <div class="form-group text-center">
+      {{docx_form.hidden_tag()}}
+      {{docx_form.document(style="background-color:  #118aed;")}} <br><br>
+      <span>Blank Density : </span>{{docx_form.percent_blank(min="1", max="50", value=value)}}
+      {{docx_form.submit2(class='btn btn-primary')}}
+    </div>
+  </form>
+</div>
+<br><br>
+<h4>Or Paste Notes Here</h4>
+
+<form method="post">
+  <div class="form-group text-center">
+    {{notes_form.hidden_tag()}}
+    <div class="textfield">
+      {{notes_form.notes(class='form-control', rows='10')}}
+    </div>
+    <span>Blank Density : </span>{{notes_form.percent_blank(min="1", max="50", value=value)}}
+    {{notes_form.submit1(class='btn btn-primary')}}
+  </div>
+</form>
+
+<div class="form-group">
+  <div class="textfield">
+    <textarea class="form-control" rows="10" placeholder="generated notes will appear here"disabled>{{notes}}</textarea>
+  </div>
+</div>
+
+
+{% endblock %}
