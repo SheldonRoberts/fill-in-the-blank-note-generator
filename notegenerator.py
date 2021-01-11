@@ -23,6 +23,15 @@ def generate_notes(text, blank_percentage):
     return text
 
 def generate_docx(filepath, blank_percentage):
+    """
+    adds blanks to a docx file and saves the result
+
+    Parameters:
+    filepath : str
+        the filepath to the .docx file to write over
+    blank_percentage : int
+        the max ratio of words to be blanked
+    """
     document = Document(filepath)
     text = ""
     for paragraph in document.paragraphs:
